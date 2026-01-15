@@ -5,7 +5,6 @@ theme = "no-style-please"
 title = "CHEMI FIQREBI ONLINE"
 
 [markdown]
-highlighting = false
 
 [extra]
 author = "Elene"
