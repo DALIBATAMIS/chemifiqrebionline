@@ -8,10 +8,34 @@
     <meta name="description" content="{% block description %}CHEMI FIQREBI ONLINE{% endblock description %}">
     <meta name="author" content="{{ config.extra.author }}">
     <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>
-        CHEMI FIQREBI ONLINE
+    <style>
+        * { 
+            font-family: 'Tangerine', cursive; font-weight: 700;
+        }
+
+        .front-and-center {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 5rem;
+            text-align: center;
+            color: #2c95e0;
+        }
+    </style>
+    <h1 class="front-and-center">
+        chemi fiqrebi online
+        <br>
+        coming soon
     </h1>
+
+
 </body>
 </html>
