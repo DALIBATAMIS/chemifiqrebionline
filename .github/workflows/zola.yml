@@ -19,6 +19,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v6.0.1
+        shell: bash
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --force --recursive 
 
       - name: Build Zola + upload Pages artifact
         uses: getzola/github-pages@066755243e69f508fd1a74739fbf1a65f656c790
