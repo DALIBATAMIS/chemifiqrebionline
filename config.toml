@@ -1,0 +1,11 @@
+base_url = "https://chemifiqrebi.online"
+compile_sass = true
+build_search_index = false
+theme = "no-style-please"
+title = "CHEMI FIQREBI ONLINE"
+
+[markdown]
+highlight_code = false
+
+[extra]
+author = "Elene"
