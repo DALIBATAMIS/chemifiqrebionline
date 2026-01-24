@@ -4,8 +4,9 @@
 
 {% block content %}
 {{ macros::navbar() }}
-<div class="article-container">
     {% if page.extra["img"] %}
+    <link preconnect="true" rel="preconnect" href="page.extra['img']">
+    <div class="article-container">
         <div class="images" style="left:  0%" id="images-l"></div>
         <div class="images" style="right: 0%" id="images-r"></div>
 
