@@ -1,0 +1,13 @@
+{% macro navbar() %}
+    <link preconnect="true" rel="stylesheet" href="{{ get_url(path='navbar.css', cachebust=true) }}" />
+
+    <div class="navbar-container">
+        <div><a href="/">HOME</a></div>
+        <div><a href="/articles">ARTICLES</a></div>
+        <div><a href="/about">ABOUT</a></div>
+    </div>
+
+    <style>
+    </style>
+
+{% endmacro navbar %}

@@ -1,0 +1,13 @@
+@mixin local-font($family, $path) {
+    @font-face {
+        font-family: $family;
+        src: url("fonts/#{$path}.ttf");
+        font-weight: 100 900;
+    }
+}
+
+@include local-font("Arial GEO", "arial_geo");
+
+* {
+    font-family: "Arial GEO";
+}

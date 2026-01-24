@@ -1,0 +1,28 @@
+@import 'base.scss';
+
+.article-container {
+    max-width: 50%;
+    margin: auto;
+}
+
+.article h1, h2, h3, h4, h5 {
+    text-align: center;
+    margin: 0;
+    filter: blur(0.025rem);
+}
+
+.article h1, h2, h3 {
+    text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
+}
+
+.articles-list {
+    display: grid;
+    width: 100%;
+    align-content: space-evenly;
+    grid-template-columns: auto auto;
+}
+
+.articles-list div {
+    align-self: center;
+    padding: 1rem;
+}

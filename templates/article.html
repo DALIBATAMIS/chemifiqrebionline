@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% import "shortcodes/_macros.html" as macros %}
+{% block title %}{{ page.title }}{% endblock title %}
+
+{% block content %}
+{{ macros::navbar() }}
+<div class="article-container">
+    <section class="article">
+        {{ page.content | safe }}
+    </section>
+</div>
+{% endblock content %}

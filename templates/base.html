@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <meta name="description" content="CHEMI FIQREBI ONLINE">
+    <meta name="author" content="{{ config.extra.author }}">
+    <link preconnect="true" rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}" />
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

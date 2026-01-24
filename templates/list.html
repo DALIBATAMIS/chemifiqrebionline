@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "shortcodes/_macros.html" as macros %}
+{% block title %}CHEMI FIQREBI ONLINE{% endblock title %}
+
+{% block content %}
+{{ macros::navbar() }}
+
+<div class="articles-list">
+    {% for page in section.pages %}
+    <div>
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <p>{{ page.date }}</p>
+        <p>{{ page.summary | safe }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
