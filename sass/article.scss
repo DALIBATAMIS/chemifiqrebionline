@@ -8,7 +8,7 @@
 .article h1, h2, h3, h4, h5 {
     text-align: center;
     margin: 0;
-    filter: blur(0.025rem);
+    filter: blur(0.04vmax);
 }
 
 .article h1, h2, h3 {
@@ -24,7 +24,7 @@
 
 .articles-list div {
     align-self: center;
-    padding: 1rem;
+    padding: 1.5vmax;
 }
 
 a:visited {

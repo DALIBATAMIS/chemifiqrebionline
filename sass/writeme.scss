@@ -1,0 +1,34 @@
+@import 'base.scss';
+
+.writeme-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto;
+}
+
+.writeme {
+    text-align: center;
+    text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
+    font-size: 3vmax;
+}
+
+.writeme-container input, textarea, button {
+    margin: 0.25vmax;
+}
+
+.writeme-container .gadamishale {
+    padding-bottom: 15vmax;
+    overflow: scroll;
+}
+
+.submit {
+    background-color: blue;
+    color: white;
+    border: rgb(44, 44, 253) solid 0.2vmax;
+    border-radius: 0.3vmax;
+}
+
+.submit:hover {
+    background-color: rgb(44, 44, 253) !important;
+    cursor: pointer;
+}

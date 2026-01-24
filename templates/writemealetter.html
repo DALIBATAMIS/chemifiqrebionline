@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "shortcodes/_macros.html" as macros %}
+{% block title %}CHEMI FIQREBI ONLINE{% endblock title %}
+
+{% block content %}
+{{ macros::navbar() }}
+<link preconnect="true" rel="stylesheet" href="{{ get_url(path='writeme.css', cachebust=true) }}" />
+<h1 class="writeme">დამიწერე წერილი და მეც გიპასუხებ :)</h1>
+<form id="writeme">
+    <div class="writeme-container">
+        <label for="author">author</label>
+        <input placeholder="avtori" name="author" id="author" required minlength="1" pattern="([a-z]|[A-Z])+" />
+        <label for="body">content</label>
+        <textarea class="gadamishale" name="body" id="body" placeholder="gadamishli guls?" required minlength="1" /></textarea>
+        <input type="submit" class="submit" value="Mitxari">
+    </div>
+</form>
+<script>
+    const form = document.querySelector("#writeme");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (e.type != "submit") {
+            return;
+        }
+
+        const formData = new FormData(form); 
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://t3pyuzjybj.execute-api.eu-north-1.amazonaws.com/default/chemifiqrebionline");
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  
+        xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 201) {
+                alert("Success");
+            } else {
+                alert("Error: " + xhr.status);
+            }
+        };
+
+        xhr.send(formData);
+        form.reset();
+    });
+</script>
+{% endblock content %}

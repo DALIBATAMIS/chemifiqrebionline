@@ -13,7 +13,6 @@
         <style>
             .images {
                 position: absolute;
-                height: 100%;
                 width: 23%;
                 background-image: url("/{{ page.extra['img'] | safe }}");
                 background-size: 100%;
@@ -26,13 +25,19 @@
                 const body = document.body;
                 const html = document.documentElement;
                 
-                const height = Math.max(
+                let height = Math.max(
                     body.scrollHeight, body.offsetHeight,
                     html.clientHeight, html.scrollHeight, html.offsetHeight
-                );
+                ).toString();
+
+                if (window.innerWidth < 700) {
+                    height = "";
+                } else {
+                    height += "px";
+                }
     
-                document.getElementById("images-l").style.height = `${height}px`;
-                document.getElementById("images-r").style.height = `${height}px`;
+                document.getElementById("images-l").style.height = height;
+                document.getElementById("images-r").style.height = height;
             });
         </script>
     {% endif %}
