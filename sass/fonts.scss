@@ -9,5 +9,6 @@
 @include local-font("Arial GEO", "arial_geo");
 
 * {
-    font-family: "Arial GEO";
+    font-family: "Arial GEO", Helvetica, sans-serif;
+    font-size: 1.3rem;
 }

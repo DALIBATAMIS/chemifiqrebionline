@@ -1,6 +1,6 @@
 .navbar-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     width: 100%;
     background-color: blue;
     margin-bottom: 2rem;
@@ -9,6 +9,8 @@
 .navbar-container div {
     color: white;
     text-align: center;
+    // letter-spacing: -0.075rem;
+    text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
 }
 
 .navbar-container a {
