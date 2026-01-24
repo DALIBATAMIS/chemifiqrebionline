@@ -9,7 +9,7 @@
 <form id="writeme">
     <div class="writeme-container">
         <label for="author">author</label>
-        <input placeholder="avtori" name="author" id="author" required minlength="1" pattern="([a-z]|[A-Z])+" />
+        <input placeholder="avtori" name="author" id="author" required minlength="1" />
         <label for="body">content</label>
         <textarea class="gadamishale" name="body" id="body" placeholder="gadamishli guls?" required minlength="1" /></textarea>
         <input type="submit" class="submit" value="Mitxari">
@@ -17,27 +17,29 @@
 </form>
 <script>
     const form = document.querySelector("#writeme");
+
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (e.type != "submit") {
-            return;
-        }
 
-        const formData = new FormData(form); 
+        const formData = new FormData(form);
+        const payload = {
+            author: formData.get("author"),
+            body: formData.get("body")
+        };
+
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://t3pyuzjybj.execute-api.eu-north-1.amazonaws.com/default/chemifiqrebionline");
-        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-  
+        xhr.setRequestHeader("Content-Type", "application/json");
+
         xhr.onload = () => {
-            if (xhr.readyState == 4 && xhr.status == 201) {
+            if (xhr.status >= 200 && xhr.status < 300) {
                 alert("Success");
             } else {
                 alert("Error: " + xhr.status);
             }
         };
 
-        xhr.send(formData);
-        form.reset();
+        xhr.send(JSON.stringify(payload));
     });
 </script>
 {% endblock content %}
