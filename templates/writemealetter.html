@@ -5,14 +5,13 @@
 {% block content %}
 {{ macros::navbar() }}
 <link preconnect="true" rel="stylesheet" href="{{ get_url(path='writeme.css', cachebust=true) }}" />
-<h1 class="writeme">დამიწერე წერილი და მეც გიპასუხებ :)</h1>
 <form id="writeme">
     <div class="writeme-container">
         <label for="author">author</label>
         <input placeholder="avtori" name="author" id="author" required minlength="1" />
         <label for="body">content</label>
-        <textarea class="gadamishale" name="body" id="body" placeholder="gadamishli guls?" required minlength="1" /></textarea>
-        <input type="submit" class="submit" value="Mitxari">
+        <textarea class="gadamishale" name="body" id="body" placeholder="momwer?" required minlength="1" /></textarea>
+        <input type="submit" class="submit" value="Send">
     </div>
 </form>
 <script>
