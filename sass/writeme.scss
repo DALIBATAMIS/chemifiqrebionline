@@ -9,23 +9,23 @@
 .writeme {
     text-align: center;
     text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
-    font-size: 3vmax;
+    font-size: 3rem;
 }
 
 .writeme-container input, textarea, button {
-    margin: 0.25vmax;
+    margin: 0.25rem;
 }
 
 .writeme-container .gadamishale {
-    padding-bottom: 15vmax;
+    padding-bottom: 15rem;
     overflow: scroll;
 }
 
 .submit {
     background-color: blue;
     color: white;
-    border: rgb(44, 44, 253) solid 0.2vmax;
-    border-radius: 0.3vmax;
+    border: rgb(44, 44, 253) solid 0.2rem;
+    border-radius: 0.2rem;
 }
 
 .submit:hover {
