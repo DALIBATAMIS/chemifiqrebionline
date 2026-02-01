@@ -4,7 +4,30 @@
 
 {% block content %}
 {{ macros::navbar() }}
-<h1 class="front-and-center">
+
+<svg class="front-and-center" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="wideOvalPath" 
+          d="M 300, 20 
+             a 200,80 0 1,1 0,160 
+             a 200,80 0 1,1 0,-160" />
+  </defs>
+
+  <text x="50%" y="50%" 
+        dominant-baseline="middle" 
+        text-anchor="middle" 
+        style="font-family: 'Tangerine', cursive, sans-serif; font-weight: 800; font-size: 8ch; fill: #2c95e0;">
     chemi fiqrebi online
-</h1>
+  </text>
+
+  <text>
+    <textPath href="#wideOvalPath" startOffset="0%" style="font-family: 'Tangerine', cursive; font-size: 3ch; fill: #ff00b3;">
+      my thoughts are playing like broken records my thoughts are playing like broken records
+      my thoughts are playing like broken records my thoughts are playing like broken records
+      my thoughts are playing like broken records my thoughts are playing like broken records
+      my thoughts are playing like broken records my thoughts are playing like broken records
+      my thoughts are playing like broken records my thoughts are playing like broken records
+    </textPath>
+  </text>
+</svg>
 {% endblock content %}
