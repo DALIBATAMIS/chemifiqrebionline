@@ -10,9 +10,12 @@
     color: white;
     text-align: center;
     text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
+    padding: 0.55vmax;
+    border-right: pink 0.1vmax solid;
 }
 
 .navbar-container a {
     text-decoration: none;
     color: white;
+    font-size: larger !important;
 }
