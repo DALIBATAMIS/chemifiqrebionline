@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {"siteId":4429221,"cookiePolicyId":21651114,"lang":"en","storage":{"useSiteId":true}};
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4429221.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
@@ -8,18 +16,25 @@
     <meta name="description" content="CHEMI FIQREBI ONLINE">
     <meta name="author" content="{{ config.extra.author }}">
     <meta name="keywords" content="blog, elene, chemifiqrebi">
-    <meta name="description" conent="kudkucuna lekvebis arqivi">
     <meta name="og:title" content="CHEMI FIQREBI ONLINE">
     <meta name="og:image" content="https://chemifiqrebi.online/imgs/lostmyname.jpg">
-    <meta name="og:description" content="kudkucuna lekvebis arqivi">
     <meta name="twitter:title" content="CHEMI FIQREBI ONLINE">
-    <meta name="twitter:description" content="kudkucuna lekvebis arqivi">
     <meta name="twitter:image" content="https://chemifiqrebi.online/imgs/lostmyname.jpg">
     <meta name="twitter:card" content="https://chemifiqrebi.online/imgs/lostmyname.jpg">
-    
+
     <link preconnect="true" rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}" />
 </head>
 <body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VH8BYT6JHY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VH8BYT6JHY');
+    </script>
+
     {% block content %}
     {% endblock content %}
 </body>
