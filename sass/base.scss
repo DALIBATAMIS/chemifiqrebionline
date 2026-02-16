@@ -5,6 +5,21 @@ html, body {
     background-color: rgb(246, 249, 250);
 }
 
+* {
+    font-size: calc(0.1 * 1.5vw + 1rem);
+}
+
 .italic {
     font-style: italic;
+}
+
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 100vw rgba(251, 129, 196, 0.9) inset;
+    z-index: 1;
+    pointer-events: none;
 }

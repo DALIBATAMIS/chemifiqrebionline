@@ -4,10 +4,13 @@
     width: 100%;
     background-color: blue;
     margin-bottom: 1rem;
+    z-index: 2;
+    position: sticky;
 }
 
 .navbar-container * {
     font-size: 1.3ch !important;
+    z-index: 2;
 }
 
 .navbar-container div {
@@ -15,11 +18,13 @@
     text-align: center;
     text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
     padding: 0.33rem;
-    border-right: pink 0.12rem solid;
+    border-right: white 0.12rem solid;
+    z-index: 2;
 }
 
 .navbar-container a {
     text-decoration: none;
     color: white;
     font-size: larger !important;
+    z-index: 2;
 }
