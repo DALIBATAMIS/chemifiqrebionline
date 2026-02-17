@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% import "shortcodes/_macros.html" as macros %}
-{% if page.title %}
 {% block title %}{{ page.title }}{% endblock title %}
-{% endif %}
 
 {% block content %}
 {{ macros::navbar() }}
